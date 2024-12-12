@@ -1,0 +1,7 @@
+
+L.easyButton('fa-map-marker', function() {
+  map.on('click', function(e) {
+    L.marker([e.latlng.lat, e.latlng.lng]).addTo(map);
+    map.off('click');  // Desativa o modo de adicionar pin após um clique
+  });
+}).addTo(map);
